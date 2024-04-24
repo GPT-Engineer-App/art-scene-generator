@@ -79,14 +79,18 @@ const Index = () => {
         </Text>
 
         <Heading size="md">Scene Prompts</Heading>
-        {project.scene_prompts.map((prompt, index) => (
-          <ScenePromptComponent key={index} {...prompt} />
-        ))}
+        <HStack spacing={8} overflowX="auto">
+          {project.scene_prompts.map((prompt, index) => (
+            <ScenePromptComponent key={index} {...prompt} />
+          ))}
+        </HStack>
 
         <Heading size="md">Scenes</Heading>
-        {project.scenes.map((scene, index) => (
-          <SceneComponent key={index} {...scene} />
-        ))}
+        <HStack spacing={8} overflowX="auto">
+          {project.scenes.map((scene, index) => (
+            <SceneComponent key={index} {...scene} />
+          ))}
+        </HStack>
 
         <Heading size="md">Style Information</Heading>
         <HStack spacing={10}>
